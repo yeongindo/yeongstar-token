@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://raw.githubusercontent.com/yeongindo/yeongstar-token/main/yst.svg" width="120" />
+</p>
+
 # YeongStar Token (YST)
 
 YeongStar Token (YST) is an ERC-20 utility token deployed on the Polygon network.
