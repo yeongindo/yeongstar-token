@@ -1,26 +1,84 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
-  <defs>
-    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#1e88ff"/>
-      <stop offset="1" stop-color="#8a2be2"/>
-    </linearGradient>
-    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#ffd86b"/>
-      <stop offset="1" stop-color="#d4a017"/>
-    </linearGradient>
-  </defs>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-color: #f1f5f9;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: 'Pretendard', system-ui, sans-serif;
+        }
+        .canvas {
+            background: white;
+            padding: 4rem;
+            border-radius: 2.5rem;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            text-align: center;
+        }
+        .logo-wrapper {
+            filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+        }
+    </style>
+</head>
+<body>
 
-  <path d="M50 6 L88 30 L50 94 L12 30 Z" fill="url(#g)" stroke="url(#gold)" stroke-width="4" />
-  <path d="M50 18 L77 34 L50 82 L23 34 Z" fill="none" stroke="rgba(255,255,255,0.35)" stroke-width="2"/>
+    <div class="canvas">
+        <h2 class="text-slate-400 text-xs font-bold mb-8 uppercase tracking-[0.2em]">Rounded Star Icon</h2>
+        
+        <div class="logo-wrapper inline-block transition-all hover:scale-110 duration-500 cursor-pointer">
+            <!-- 둥근 모서리가 적용된 개선된 SVG -->
+            <svg width="160" height="160" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                <!-- 배경: 부드러운 둥근 사각형 -->
+                <rect x="0" y="0" width="64" height="64" rx="18" fill="#F59E0B"/>
+                
+                <!-- 모든 꼭짓점이 둥글게 처리된 별 -->
+                <path
+                    d="M32 12
+                    C33.5 12 34.5 13.5 35 15
+                    L38.5 24
+                    C39 25.5 40.5 26.5 42 26.5
+                    L51.5 27.5
+                    C53 27.5 54 29 53 30.5
+                    L46 37.5
+                    C45 38.5 44.5 40 45 41.5
+                    L47 51
+                    C47.5 52.5 46 53.5 44.5 52.5
+                    L36 48
+                    C34.5 47 29.5 47 28 48
+                    L19.5 52.5
+                    C18 53.5 16.5 52.5 17 51
+                    L19 41.5
+                    C19.5 40 19 38.5 18 37.5
+                    L11 30.5
+                    C10 29 11 27.5 12.5 27.5
+                    L22 26.5
+                    C23.5 26.5 25 25.5 25.5 24
+                    L29 15
+                    C29.5 13.5 30.5 12 32 12
+                    Z"
+                    fill="#FFFFFF"
+                    stroke-linejoin="round"
+                    stroke-linecap="round"/>
+            </svg>
+        </div>
 
-  <path d="M74 16 l3 7 7 1-6 4 2 7-6-4-6 4 2-7-6-4 7-1z"
-        fill="url(#gold)" opacity="0.95"/>
+        <div class="mt-10 space-y-2">
+            <p class="text-slate-800 font-medium text-lg">Soft Corner Design</p>
+            <p class="text-slate-400 text-sm">모든 꼭짓점에 곡률을 적용하여<br>훨씬 친근하고 현대적인 느낌을 줍니다.</p>
+        </div>
 
-  <text x="50" y="62"
-        font-family="Arial Black, Arial, sans-serif"
-        font-size="28"
-        text-anchor="middle"
-        fill="#ffffff"
-        letter-spacing="1">YST</text>
-</svg>
+        <div class="mt-8 flex justify-center gap-3">
+            <div class="px-3 py-1 bg-slate-100 rounded-full text-[10px] text-slate-500 font-mono">SVG Path</div>
+            <div class="px-3 py-1 bg-slate-100 rounded-full text-[10px] text-slate-500 font-mono">Bezier Curve</div>
+        </div>
+    </div>
+
+</body>
+</html>
