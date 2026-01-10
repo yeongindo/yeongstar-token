@@ -1,84 +1,28 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        body {
-            background-color: #f1f5f9;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            margin: 0;
-            font-family: 'Pretendard', system-ui, sans-serif;
-        }
-        .canvas {
-            background: white;
-            padding: 4rem;
-            border-radius: 2.5rem;
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-            text-align: center;
-        }
-        .logo-wrapper {
-            filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
-        }
-    </style>
-</head>
-<body>
-
-    <div class="canvas">
-        <h2 class="text-slate-400 text-xs font-bold mb-8 uppercase tracking-[0.2em]">Rounded Star Icon</h2>
-        
-        <div class="logo-wrapper inline-block transition-all hover:scale-110 duration-500 cursor-pointer">
-            <!-- 둥근 모서리가 적용된 개선된 SVG -->
-            <svg width="160" height="160" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-                <!-- 배경: 부드러운 둥근 사각형 -->
-                <rect x="0" y="0" width="64" height="64" rx="18" fill="#F59E0B"/>
-                
-                <!-- 모든 꼭짓점이 둥글게 처리된 별 -->
-                <path
-                    d="M32 12
-                    C33.5 12 34.5 13.5 35 15
-                    L38.5 24
-                    C39 25.5 40.5 26.5 42 26.5
-                    L51.5 27.5
-                    C53 27.5 54 29 53 30.5
-                    L46 37.5
-                    C45 38.5 44.5 40 45 41.5
-                    L47 51
-                    C47.5 52.5 46 53.5 44.5 52.5
-                    L36 48
-                    C34.5 47 29.5 47 28 48
-                    L19.5 52.5
-                    C18 53.5 16.5 52.5 17 51
-                    L19 41.5
-                    C19.5 40 19 38.5 18 37.5
-                    L11 30.5
-                    C10 29 11 27.5 12.5 27.5
-                    L22 26.5
-                    C23.5 26.5 25 25.5 25.5 24
-                    L29 15
-                    C29.5 13.5 30.5 12 32 12
-                    Z"
-                    fill="#FFFFFF"
-                    stroke-linejoin="round"
-                    stroke-linecap="round"/>
-            </svg>
-        </div>
-
-        <div class="mt-10 space-y-2">
-            <p class="text-slate-800 font-medium text-lg">Soft Corner Design</p>
-            <p class="text-slate-400 text-sm">모든 꼭짓점에 곡률을 적용하여<br>훨씬 친근하고 현대적인 느낌을 줍니다.</p>
-        </div>
-
-        <div class="mt-8 flex justify-center gap-3">
-            <div class="px-3 py-1 bg-slate-100 rounded-full text-[10px] text-slate-500 font-mono">SVG Path</div>
-            <div class="px-3 py-1 bg-slate-100 rounded-full text-[10px] text-slate-500 font-mono">Bezier Curve</div>
-        </div>
-    </div>
-
-</body>
-</html>
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0" y="0" width="64" height="64" rx="16" fill="#F59E0B"/>
+  <path
+    d="M32 12
+       C33.5 12 34.5 13.5 35 15
+       L38.5 24
+       C39 25.5 40.5 26.5 42 26.5
+       L51.5 27.5
+       C53 27.5 54 29 53 30.5
+       L46 37.5
+       C45 38.5 44.5 40 45 41.5
+       L47 51
+       C47.5 52.5 46 53.5 44.5 52.5
+       L36 48
+       C34.5 47 29.5 47 28 48
+       L19.5 52.5
+       C18 53.5 16.5 52.5 17 51
+       L19 41.5
+       C19.5 40 19 38.5 18 37.5
+       L11 30.5
+       C10 29 11 27.5 12.5 27.5
+       L22 26.5
+       C23.5 26.5 25 25.5 25.5 24
+       L29 15
+       C29.5 13.5 30.5 12 32 12
+       Z"
+    fill="#FFFFFF"/>
+</svg>
