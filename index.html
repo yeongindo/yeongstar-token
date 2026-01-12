@@ -7,8 +7,10 @@
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
+
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
+
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
@@ -28,14 +30,14 @@
   </style>
 </head>
 
-<body class="bg-slate-50 text-slate-900 font-sans">
+<body class="bg-slate-50 text-slate-900 font-sans overflow-x-hidden">
 
   <!-- Navigation -->
-  <nav class="fixed w-full z-50 glass-morphism">
+  <nav class="fixed top-0 left-0 w-full z-50 glass-morphism">
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
       <div class="flex items-center space-x-3">
         <div class="w-10 h-10 bg-amber-500 rounded-full flex items-center justify-center text-white shadow-lg">
-          <i data-lucide="star" class="w-6 h-6 fill-current"></i>
+          <i data-lucide="star" class="w-6 h-6"></i>
         </div>
         <div class="flex flex-col leading-tight">
           <span class="text-xl font-black tracking-tighter text-slate-900 uppercase">
@@ -53,13 +55,15 @@
       </div>
 
       <button
-  id="connectWalletBtn"
-  class="bg-slate-900 text-white px-6 py-2.5 rounded-full font-bold hover:bg-amber-600 transition-all shadow-lg active:scale-95">
-  Connect Wallet
-</button>
+        id="connectWalletBtn"
+        class="bg-slate-900 text-white px-6 py-2.5 rounded-full font-bold hover:bg-amber-600 transition-all shadow-lg active:scale-95">
+        Connect Wallet
+      </button>
+    </div>
+  </nav>
 
   <!-- Hero Section -->
-  <section id="home" class="relative min-h-screen flex items-center pt-20 overflow-hidden bg-white">
+  <section id="home" class="relative min-h-screen flex items-center pt-28 overflow-hidden bg-white">
     <div class="absolute top-0 right-0 -mt-20 -mr-20 w-96 h-96 bg-amber-100 rounded-full filter blur-[100px] opacity-50"></div>
     <div class="absolute bottom-0 left-0 -mb-20 -ml-20 w-96 h-96 bg-blue-100 rounded-full filter blur-[100px] opacity-50"></div>
 
@@ -100,12 +104,48 @@
     </div>
   </section>
 
+  <!-- About -->
+  <section id="about" class="bg-slate-50 py-24">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-4xl font-black tracking-tight text-slate-900 mb-6">About</h2>
+      <p class="text-slate-600 max-w-3xl leading-relaxed">
+        YeongStar Token (YST) is a community-driven ERC-20 utility token on Polygon. This site is a simple public landing page for transparency and future expansion.
+      </p>
+    </div>
+  </section>
+
+  <!-- Tokenomics -->
+  <section id="tokenomics" class="bg-white py-24">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-4xl font-black tracking-tight text-slate-900 mb-6">Tokenomics</h2>
+      <ul class="text-slate-600 leading-relaxed space-y-2">
+        <li><b>Token:</b> YeongStar Token (YST)</li>
+        <li><b>Network:</b> Polygon</li>
+        <li><b>Standard:</b> ERC-20</li>
+        <li><b>Decimals:</b> 18</li>
+        <li><b>Contract:</b> 0xCb77aC700E272E958A58FEB888CA8d82b4aA22b4</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Roadmap -->
+  <section id="roadmap" class="bg-slate-50 py-24">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-4xl font-black tracking-tight text-slate-900 mb-6">Roadmap</h2>
+      <div class="text-slate-600 leading-relaxed space-y-2">
+        <p>• Phase 1: Launch landing page + token transparency</p>
+        <p>• Phase 2: Community growth + utilities</p>
+        <p>• Phase 3: Ecosystem expansion</p>
+      </div>
+    </div>
+  </section>
+
   <!-- Footer -->
   <footer class="bg-slate-50 border-t border-slate-200 py-20">
     <div class="max-w-7xl mx-auto px-6 text-center">
       <div class="flex items-center justify-center space-x-3 mb-8">
         <div class="w-10 h-10 bg-amber-500 rounded-full flex items-center justify-center text-white">
-          <i data-lucide="star" class="w-6 h-6 fill-current"></i>
+          <i data-lucide="star" class="w-6 h-6"></i>
         </div>
         <span class="text-2xl font-black tracking-tighter text-slate-900">YeongStar Token [YST]</span>
       </div>
@@ -120,54 +160,49 @@
       </p>
 
       <div class="flex justify-center space-x-6">
-        <a href="#" class="text-slate-400 hover:text-amber-500 transition-colors"><i data-lucide="twitter"></i></a>
-        <a href="#" class="text-slate-400 hover:text-amber-500 transition-colors"><i data-lucide="github"></i></a>
-        <a href="#" class="text-slate-400 hover:text-amber-500 transition-colors"><i data-lucide="send"></i></a>
+        <a href="#" class="text-slate-400 hover:text-amber-500 transition-colors" aria-label="Twitter">
+          <i data-lucide="twitter"></i>
+        </a>
+        <a href="https://github.com/yeongindo/yeongstar-token" class="text-slate-400 hover:text-amber-500 transition-colors" aria-label="GitHub">
+          <i data-lucide="github"></i>
+        </a>
+        <a href="mailto:yeong4326@naver.com" class="text-slate-400 hover:text-amber-500 transition-colors" aria-label="Email">
+          <i data-lucide="send"></i>
+        </a>
       </div>
     </div>
   </footer>
 
   <script>
+    // 1) Lucide Icons (only once)
     lucide.createIcons();
+
+    // 2) Connect Wallet (MetaMask)
+    const connectBtn = document.getElementById("connectWalletBtn");
+
+    async function connectWallet() {
+      if (typeof window.ethereum === "undefined") {
+        alert("MetaMask is not installed. Please install MetaMask first.");
+        return;
+      }
+
+      try {
+        const accounts = await window.ethereum.request({ method: "eth_requestAccounts" });
+        const userAddress = accounts[0];
+
+        connectBtn.innerText = userAddress.slice(0, 6) + "..." + userAddress.slice(-4);
+        connectBtn.classList.remove("bg-slate-900");
+        connectBtn.classList.add("bg-amber-500");
+
+        console.log("Connected wallet:", userAddress);
+      } catch (error) {
+        console.error("Wallet connection failed:", error);
+        alert("Wallet connection was cancelled.");
+      }
+    }
+
+    connectBtn.addEventListener("click", connectWallet);
   </script>
-</body>
-</html>
-<script>
-  const connectBtn = document.getElementById("connectWalletBtn");
-
-  async function connectWallet() {
-    if (typeof window.ethereum === "undefined") {
-      alert("MetaMask is not installed. Please install MetaMask first.");
-      return;
-    }
-
-    try {
-      const accounts = await window.ethereum.request({
-        method: "eth_requestAccounts",
-      });
-
-      const userAddress = accounts[0];
-      connectBtn.innerText =
-        userAddress.slice(0, 6) + "..." + userAddress.slice(-4);
-      connectBtn.classList.remove("bg-slate-900");
-      connectBtn.classList.add("bg-amber-500");
-
-      console.log("Connected wallet:", userAddress);
-    } catch (error) {
-      console.error("Wallet connection failed:", error);
-      alert("Wallet connection was cancelled.");
-    }
-  }
-
-  connectBtn.addEventListener("click", connectWallet);
-</script>
-<script>
-  lucide.createIcons();
-</script>
-
-<script>
-  // 메타마스크 연결 코드
-</script>
 
 </body>
 </html>
