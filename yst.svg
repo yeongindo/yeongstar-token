@@ -1,28 +1,24 @@
-<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-  <rect x="0" y="0" width="64" height="64" rx="16" fill="#F59E0B"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <!-- Orange circle -->
+  <circle cx="16" cy="16" r="14" fill="#F59E0B"/>
+
+  <!-- White outlined star -->
   <path
-    d="M32 12
-       C33.5 12 34.5 13.5 35 15
-       L38.5 24
-       C39 25.5 40.5 26.5 42 26.5
-       L51.5 27.5
-       C53 27.5 54 29 53 30.5
-       L46 37.5
-       C45 38.5 44.5 40 45 41.5
-       L47 51
-       C47.5 52.5 46 53.5 44.5 52.5
-       L36 48
-       C34.5 47 29.5 47 28 48
-       L19.5 52.5
-       C18 53.5 16.5 52.5 17 51
-       L19 41.5
-       C19.5 40 19 38.5 18 37.5
-       L11 30.5
-       C10 29 11 27.5 12.5 27.5
-       L22 26.5
-       C23.5 26.5 25 25.5 25.5 24
-       L29 15
-       C29.5 13.5 30.5 12 32 12
+    d="M16 6.2
+       L19.1 12.3
+       L25.9 13.3
+       L21 18
+       L22.2 24.7
+       L16 21.5
+       L9.8 24.7
+       L11 18
+       L6.1 13.3
+       L12.9 12.3
        Z"
-    fill="#FFFFFF"/>
+    fill="none"
+    stroke="#FFFFFF"
+    stroke-width="2.2"
+    stroke-linejoin="round"
+    stroke-linecap="round"
+  />
 </svg>
